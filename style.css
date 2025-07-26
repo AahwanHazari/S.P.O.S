@@ -442,4 +442,7 @@ html, body {
   }
 }
 
-        
+p {
+  text-align: justify;
+}
+
