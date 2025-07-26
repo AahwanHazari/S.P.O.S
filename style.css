@@ -421,5 +421,25 @@ html, body {
   #scrollTopBtn:hover {
     transform: scale(1.1);
   }
-  
+  #intro h1, #intro h2, #intro h3, #intro h4 {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  margin: 10px 0;
+}
+
+/* Mobile font tweak */
+@media (max-width: 768px) {
+  #bigboy {
+    font-size: 2rem;
+  }
+
+  #midboy {
+    font-size: 1.3rem;
+  }
+
+  #motto {
+    font-size: 1.1rem;
+  }
+}
+
         
