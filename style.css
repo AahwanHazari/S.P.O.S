@@ -126,7 +126,7 @@ html, body {
   /* Chart Container */
   .donut-wrapper {
     width: 100%;
-    height: 260px;
+    height: 340px;
   }
   
   /* Closing Section */
@@ -445,4 +445,6 @@ html, body {
 p {
   text-align: justify;
 }
-
+ .footer-credit{
+  text-align: center;
+ }
