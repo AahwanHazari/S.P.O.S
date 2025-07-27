@@ -219,6 +219,7 @@ html, body {
     border: 1px solid #00ffe733;
     box-shadow: 0 0 10px #00ffe722;
     font-size: 1rem;
+    text-align: justify;
   }
   .feature-block h3, .benefit-block h3 {
     color: #00ffe7;
@@ -229,6 +230,7 @@ html, body {
     color: #ccc;
     margin-bottom: 1rem;
     line-height: 1.6;
+    text-justify: auto;
   }
   .feature-block strong, .benefit-block strong {
     color: #00ffff;
@@ -269,6 +271,7 @@ html, body {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #ccc;
+    text-align: justify;
   }
   
   .solutions-grid {
@@ -486,6 +489,7 @@ p {
   max-width: 800px;
   margin: 0 auto 1rem auto;
   line-height: 1.6;
+  justify-content: center;
 }
 
 .dev-credit {
