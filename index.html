@@ -16,16 +16,13 @@
   
 </head>
 <body>
+  <a href="#home"><img src="logo.png", id="logo"></img></a>
   <audio id="bg-audio" src="audio.mp3" loop preload="auto"></audio>
+
 
   <div id="audio-control">
     <button id="play-btn" onclick="playAudio()">Click here for Voice Guide</button>
     <button id="stop-btn" onclick="stopAudio()" style="display: none;">Stop Voice Guide</button>
-  </div>
-
-  <div id="embeds">
-    <iframe src="https://preview--thirty-minute-open.lovable.app/" class="embed-frame" title="Timer" loading="lazy"></iframe>
-    <iframe src="https://spot-finder-gwalior-ui-40.lovable.app/" class="embed-frame" title="Spot Finder" loading="lazy"></iframe>
   </div>
 
   <section id="intro" style="text-align: center;">
@@ -35,18 +32,24 @@
     <h4 id="motto">"Park with Ease, Drive with Peace"</h4>
   </section>
 
+  <div id="embeds">
+    <iframe src="https://preview--thirty-minute-open.lovable.app/" class="embed-frame1" title="Timer" loading="lazy"></iframe>
+    <iframe src="https://spot-finder-gwalior-ui-40.lovable.app/" class="embed-frame" title="Spot Finder" loading="lazy"></iframe>
+  </div>
+
+  
+
   <section id="ignite">
-    <h2 class="section-title">Igniting the Innovation</h2>
+    <h2 class="section-title" id="bigboy">Igniting the Innovation</h2>
     <div class="full-bleed-wrapper">
       <div class="cards-container">
         <div class="info-card">
           <h3>The Challenge: Parking Chaos in Cities</h3>
           <p>Unauthorized parking in No Parking zones is not just a rule violation — it's a daily obstacle to smooth traffic, emergency movement, and pedestrian safety.</p>
-          <p>Daily Average Incidents</p>
           <div class="donut-wrapper">
             <canvas id="parkingDonut"></canvas>
           </div>
-          <p>~Source: Field observations and local traffic police reports, Gwalior (Q4 2024).</p>
+          <p>Source: Field observations and local traffic police reports, Gwalior (Q4 2024).</p>
         </div>
 
         <div class="info-card">
@@ -68,13 +71,13 @@
   </section>
 
   <section class="closing">
-    <h3>S.P.O.S. is not just about automation — it's about intelligent redirection.</h3>
+    <h3>"S.P.O.S. is not just about automation — it's about intelligent redirection."</h3>
     <p>Instead of waiting for a fine or a tow, the system informs the driver in real time, educates them, and shows them a better choice: where to park legally, instantly. It’s smart, practical, and time-saving.</p>
     <h4>Our motto? <em>"Park with Ease, Drive with Peace."</em></h4>
     <h3>So how does this actually work on the road?</h3>
   </section>
   <section id="how-it-works">
-    <h2 class="section-title">How S.P.O.S. Works</h2>
+    <h2 class="section-title", id="bigboy">How S.P.O.S. Works</h2>
     <div class="timeline">
       <div class="timeline-step">
         <div class="dot"></div>
@@ -118,7 +121,7 @@
     </div>
   </section>
   <section id="why-standout">
-    <h2 class="section-title">Why S.P.O.S. Stands Out</h2>
+    <h2 class="section-title", id="bigboy">Why S.P.O.S. Stands Out</h2>
     <div class="features-benefits-grid">
       <div class="feature-block">
         <h3>🚀 Highlights</h3>
@@ -160,13 +163,34 @@
       </div>
     </div>
   </section>
+
+  <section id="tech-gallery">
+    <h2 class="section-title", id="bigboy">In Action: S.P.O.S. Unveiled</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="arduino.png" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="lcd.png" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="buzzer.png" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="ir.png" alt="">
+      </div>
+      <div class="gallery-item">
+        <img src="c++.png" alt="">
+      </div>
+    </div>
+  </section>
   <section id="real-solutions">
     <h2 class="section-title">Smart Parking, Real Problems, Real Solutions</h2>
-    <p class="section-subtitle">S.P.O.S is designed to solve real problems in real situations. Here’s how it transforms everyday parking experiences across different environments:</p>
+    <p class="section-subtitle">S.P.O.S is designed to solve real problems in real situations. Here’s how it transforms everyday parking experiences across different environments.</p>
   
     <div class="solutions-grid">
       <div class="solution-card">
-        <h3>🚗 Urban Commuters</h3>
+        <h3>🚗 Urban Transit Users</h3>
         <p>Find parking near your workplace easily.</p>
       </div>
       <div class="solution-card">
@@ -203,7 +227,7 @@
     </div>
   </section>
   <section id="tech-gallery">
-    <h2 class="section-title">Built Smart: Our Tech Stack</h2>
+    <h2 class="section-title", id="bigboy">Built Smart: Our Tech Stack</h2>
     <div class="gallery-grid">
       <div class="gallery-item">
         <img src="arduino.png" alt="Arduino Board">
@@ -221,10 +245,14 @@
         <img src="ir.png" alt="IR Sensor">
         <p>The IR sensors, ready for the purpose.</p>
       </div>
+      <div class="gallery-item">
+        <img src="c++.png" alt="C++ Language">
+        <p>C++, the Coding Language used in the Arduino.</p>
+      </div>
     </div>
   </section>
   <section id="road-ahead">
-    <h2 class="section-title">The road ahead, starts here.</h2>
+    <h2 class="section-title", id="bigboy">The road ahead, starts here.</h2>
     <div class="road-content">
       <p>
         In today’s fast-paced world, parking isn’t just a minor inconvenience — it’s a growing urban challenge affecting millions every day.
@@ -244,6 +272,16 @@
         <strong>With SPOS, we’re not just making parking easier — we’re driving change.</strong>
       </p>
     </div>
+    <section class="thank-you-section">
+      <h2>With Gratitude</h2>
+      <p>
+        We extend our heartfelt thanks to <strong>Ms. Neha Sonone</strong>, our guiding light and mentor throughout this project. Her unwavering support, insights, and encouragement helped bring S.P.O.S. to life.
+      </p>
+      <p>
+        We also express our sincere appreciation to all the teachers and faculty members whose constant motivation and belief in us made this journey meaningful and memorable.
+      </p>
+    </section>
+
   </section>
   <button id="scrollTopBtn" title="Go to top">
     <i class="fas fa-chevron-up"></i>
@@ -253,6 +291,12 @@
   
 
   <footer id="footer">
+   <div class="dev-credit">
+      <p>🚀 Conceptualized & Developed by</p>
+      <h3>Aahwan Hazari · Shreya Saxena · Aditya Goyal · Jayant Kumar Singh</h3>
+   </div>
+
+
     <h2 class="footer-title">Stay Connected</h2>
     <div class="social-links">
       <a href="https://gwaliorgloryhighschool.ac.in/" target="_blank" aria-label="Website">
@@ -306,7 +350,7 @@
             labels: {
             color: '#fff',
                 font: {
-                size: 14
+                size: 8
                 }
             }
             },

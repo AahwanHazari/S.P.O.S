@@ -8,6 +8,7 @@ html, body {
     font-family: 'Poppins', sans-serif;
     background-color: #0a0a0a;
     color: #e0e0e0;
+    justify-content: center;
   }
   
   /* Typography Reset */
@@ -53,6 +54,13 @@ html, body {
     border: 2px solid #00ffe7;
     box-shadow: 0 0 20px #00ffe777;
   }
+  .embed-frame1{
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    border: 2px solid #00ffe7;
+    box-shadow: 0 0 20px #00ffe777;
+  }
   @media (max-width: 768px) {
     .embed-frame {
       width: 95%;
@@ -88,7 +96,7 @@ html, body {
     text-align: center;
   }
   .section-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
   
@@ -127,6 +135,7 @@ html, body {
   .donut-wrapper {
     width: 100%;
     height: 340px;
+    padding-bottom: 2rem;
   }
   
   /* Closing Section */
@@ -150,6 +159,7 @@ html, body {
     color: #00ffe7;
     padding: 4rem 1rem;
     text-align: center;
+    font-size: 2rem;
   }
   .timeline {
     display: flex;
@@ -192,6 +202,7 @@ html, body {
     background: #0a0a0a;
     color: #00ffe7;
     padding: 4rem 1rem;
+    font-size: 2rem;
   }
   .features-benefits-grid {
     display: grid;
@@ -200,7 +211,6 @@ html, body {
     max-width: 1000px;
     margin: 2rem auto 0;
     justify-content: center;
-    text-align: center;
   }
   .feature-block, .benefit-block {
     background: #111;
@@ -448,3 +458,63 @@ p {
  .footer-credit{
   text-align: center;
  }
+ #logo{
+  height: 50px;
+  width: 75px;
+  border-radius: 5px;
+  padding: 5px;
+ }
+ .thank-you-section {
+  padding: 4rem 2rem;
+  background: #0a0a0a;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 0 10px #00f7ff;
+  border-radius: 5px;
+}
+
+.thank-you-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff; /* cyan */
+}
+
+.thank-you-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  line-height: 1.6;
+}
+
+.dev-credit {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(to right, #0ff, #00f0ff25);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Orbitron', sans-serif;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+.dev-credit p {
+  margin: 0;
+  font-size: 1rem;
+  color: #aaaaaa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dev-credit h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  }
+  100% {
+    text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+  }
+}
