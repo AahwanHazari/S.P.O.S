@@ -16,4 +16,22 @@ function playAudio() {
     document.getElementById("play-btn").style.display = "inline-block";
   }
 
-  
+// Save user language preference
+document.getElementById('en-link')?.addEventListener('click', () => {
+  localStorage.setItem('lang', 'en');
+});
+document.getElementById('hi-link')?.addEventListener('click', () => {
+  localStorage.setItem('lang', 'hi');
+});
+
+// Auto redirect to preferred language on load
+window.addEventListener('DOMContentLoaded', () => {
+  const lang = localStorage.getItem('lang');
+  const current = window.location.pathname;
+
+  if (lang === 'hi' && !current.includes('hindi.html')) {
+    window.location.href = 'hindi.html';
+  } else if (lang === 'en' && !current.includes('index.html')) {
+    window.location.href = 'index.html';
+  }
+});
