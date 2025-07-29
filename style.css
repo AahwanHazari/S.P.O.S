@@ -583,22 +583,7 @@ p {
   color: #007bff;
 }
   
-#app{
-    background-color: #000000; /* green */
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-    box-shadow: 0 4px 12px hsl(175, 97%, 44%);
 
-  }
-
-#app:hover {
-    box-shadow: 0 4px 12px hsl(207, 97%, 44%);
-  }
 #center-container {
     display: flex;
     justify-content: center; /* Horizontal center */
