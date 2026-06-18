@@ -888,6 +888,7 @@ p {
 .green-led{
   background:#00ff66;
   box-shadow:0 0 15px #00ff66;
+  animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
