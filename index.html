@@ -47,7 +47,97 @@
     <iframe src="https://spot-finder-gwalior-ui-40.lovable.app/" class="embed-frame" title="Spot Finder" loading="lazy"></iframe>
   </div>
 
-  
+  <section id="urban-impact">
+
+    <h2 class="section-title">🌱 S.P.O.S. Civic Rewards System</h2>
+
+    <div class="impact-container">
+
+    <!-- Reward Card -->
+
+      <div class="impact-card">
+
+        <h3>Responsible Parking Action</h3>
+
+        <p>
+          Have you successfully relocated your vehicle to a legal parking area?
+        </p>
+
+        <button id="rewardBtn" onclick="showReward()">
+          🚗 Vehicle Cleared
+        </button>
+
+        <div id="rewardMessage">
+
+          <h3>✅ Compliance Recorded</h3>
+
+          <p>
+            Thank you for choosing responsible parking.
+          </p>
+
+          <p>
+            Your action has helped improve urban mobility and support a smarter city.
+          </p>
+
+        </div>
+
+      </div>
+
+    <!-- Dashboard Card -->
+
+      <div class="impact-card">
+
+        <h3>🏙️ Urban Impact Dashboard</h3>
+
+        <div class="stats-grid">
+
+          <div class="stat-box">
+            <h4>Violations Prevented</h4>
+            <span id="violations">0</span>
+          </div>
+
+          <div class="stat-box">
+            <h4>Fuel Saved</h4>
+            <span id="fuel">0.00 L</span>
+          </div>
+
+          <div class="stat-box">
+            <h4>CO₂ Reduced</h4>
+            <span id="co2">0.00 kg</span>
+          </div>
+
+          <div class="stat-box">
+            <h4>Traffic Delay Prevented</h4>
+            <span id="delay">0 min</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    <!-- Citizen Status -->
+
+      <div class="impact-card">
+
+        <h3>🏅 Citizen Status</h3>
+
+        <div id="citizenBadge">
+          🥉 Responsible Citizen
+        </div>
+
+        <p class="badge-desc">
+          Continue following parking guidelines to improve your city impact.
+        </p>
+
+      </div>
+
+    </div>
+
+    <p class="impact-note">
+    * Statistics shown are estimated demonstration values based on successful parking compliance events.
+    </p>
+
+  </section>
 
   <section id="ignite">
     <h2 class="section-title" id="bigboy">Igniting the Innovation</h2>
@@ -426,6 +516,6 @@
     };
   </script>
   
-  
+  <script src="script.js"></script>
 </body>
 </html>

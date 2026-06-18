@@ -56,7 +56,7 @@ html, body {
   }
   .embed-frame1{
     width: 100%;
-    height: 300px;
+    height: 650px;
     border-radius: 12px;
     border: 2px solid #00ffe7;
     box-shadow: 0 0 20px #00ffe777;
@@ -81,8 +81,9 @@ html, body {
   #midboy {
     font-size: 2rem;
     margin-top: 1rem;
-    alignment: center;
-
+    text-align: center !important;
+    width: 100%;
+    display: block;
   }
   #motto {
     font-style: italic;
@@ -614,4 +615,238 @@ p {
   text-align: justify;
   color: #00ffe7;
   padding-bottom: 15px;
+}
+
+/* ==========================
+   CIVIC REWARDS SECTION
+========================== */
+
+#urban-impact {
+  background: #0d1117;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.impact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.impact-card {
+  background: #111827;
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid #00ffe733;
+  box-shadow: 0 0 15px #00ffe722;
+}
+
+.impact-card h3 {
+  color: #00ffe7;
+  margin-bottom: 1rem;
+}
+
+.impact-card p {
+  text-align: center;
+}
+
+#rewardBtn {
+
+  margin-top: 1rem;
+
+  padding: 14px 24px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+      135deg,
+      #00ffe7,
+      #00c6ff
+  );
+
+  color: black;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+#rewardBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffe7;
+}
+
+#rewardMessage {
+
+  display: none;
+
+  margin-top: 1.5rem;
+
+  padding: 1rem;
+
+  border-radius: 12px;
+
+  background: rgba(0,255,231,0.08);
+
+  border: 1px solid #00ffe755;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-box {
+
+  background: #0f172a;
+
+  padding: 1rem;
+
+  border-radius: 12px;
+
+  border: 1px solid #00ffe722;
+
+  transition: 0.3s;
+}
+
+.stat-box:hover {
+  transform: scale(1.03);
+}
+
+.stat-box h4 {
+
+  color: #00ffff;
+
+  font-size: 0.95rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.stat-box span {
+
+  font-size: 1.8rem;
+
+  font-weight: bold;
+
+  color: white;
+
+  display: block;
+
+  transition: 0.3s;
+}
+@keyframes pulseGlow {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+.pulse {
+  animation: pulseGlow 0.5s ease;
+}
+
+/* =======================
+   EXTRA SMART CITY CARDS
+======================= */
+
+#citizenBadge {
+
+  margin-top: 1rem;
+
+  font-size: 1.4rem;
+
+  font-weight: bold;
+
+  color: #00ffe7;
+}
+
+.badge-desc {
+
+  margin-top: 1rem;
+
+  text-align: center;
+}
+
+.progress-container {
+
+  width: 100%;
+
+  height: 22px;
+
+  background: #1e293b;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  margin-top: 1rem;
+}
+
+#cityProgressBar {
+
+  width: 0%;
+
+  height: 100%;
+
+  background: linear-gradient(
+      90deg,
+      #00ffe7,
+      #00c6ff
+  );
+
+  transition: width 0.7s ease;
+}
+
+#cityProgressText {
+
+  margin-top: 10px;
+
+  font-size: 1.3rem;
+
+  font-weight: bold;
+}
+
+.projection-grid {
+
+  display: grid;
+
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.projection-grid p {
+
+  font-size: 1.3rem;
+
+  font-weight: bold;
+
+  color: #00ffe7;
+}
+
+.impact-note {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  text-align: center;
+  line-height: 1.5;
 }

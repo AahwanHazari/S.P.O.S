@@ -53,7 +53,97 @@
     <iframe src="https://spot-finder-gwalior-ui-40.lovable.app/" class="embed-frame" title="Spot Finder" loading="lazy"></iframe>
   </div>
 
-  
+  <section id="urban-impact">
+
+    <h2 class="section-title">🌱 S.P.O.S. नागरिक प्रोत्साहन प्रणाली</h2>
+
+    <div class="impact-container">
+
+      <!-- Reward Card -->
+
+      <div class="impact-card">
+
+        <h3>जिम्मेदार पार्किंग कार्रवाई</h3>
+
+        <p>
+          क्या आपने अपने वाहन को वैध पार्किंग क्षेत्र में सफलतापूर्वक स्थानांतरित कर दिया है?
+        </p>
+
+        <button id="rewardBtn" onclick="showReward()">
+          🚗 वाहन हटा दिया गया
+        </button>
+
+        <div id="rewardMessage">
+
+          <h3>✅ अनुपालन दर्ज किया गया</h3>
+
+          <p>
+            जिम्मेदार पार्किंग चुनने के लिए धन्यवाद।
+          </p>
+
+          <p>
+            आपकी इस कार्रवाई ने यातायात व्यवस्था को बेहतर बनाने तथा एक स्मार्ट शहर के निर्माण में योगदान दिया है।
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- Dashboard Card -->
+
+      <div class="impact-card">
+
+        <h3>🏙️ शहरी प्रभाव डैशबोर्ड</h3>
+
+        <div class="stats-grid">
+
+          <div class="stat-box">
+            <h4>रोके गए उल्लंघन</h4>
+            <span id="violations">0</span>
+          </div>
+
+          <div class="stat-box">
+            <h4>बचाया गया ईंधन</h4>
+            <span id="fuel">0.00 L</span>
+          </div>
+
+          <div class="stat-box">
+            <h4>कम हुआ CO₂ उत्सर्जन</h4>
+            <span id="co2">0.00 kg</span>
+          </div>
+
+          <div class="stat-box">
+            <h4>रोका गया यातायात विलंब</h4>
+            <span id="delay">0 min</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    <!-- Citizen Status -->
+
+      <div class="impact-card">
+
+        <h3>🏅 नागरिक स्थिति</h3>
+
+        <div id="citizenBadge">
+        🥉 जिम्मेदार नागरिक
+        </div>
+
+        <p class="badge-desc">
+          शहर पर अपने सकारात्मक प्रभाव को बढ़ाने के लिए जिम्मेदार पार्किंग जारी रखें।
+        </p>
+
+      </div>
+
+  </div>
+
+  <p class="impact-note">
+    * प्रदर्शित आँकड़े सफल पार्किंग अनुपालन घटनाओं पर आधारित अनुमानित प्रदर्शन मान हैं।
+  </p>
+
+  </section>
 
   <section id="ignite">
     <h2 class="section-title" id="bigboy">नवाचार की शुरुआत</h2>
@@ -125,7 +215,7 @@
         <div class="dot"></div>
         <div class="step-content">
           <h3>काउंटडाउन + पार्किंग गाइडेंस</h3>
-          <p>एक 30-मिनट का टाइमर शुरू होता है। वेबसाइट नज़दीकी उपलब्ध पार्किंग स्पेस को मैप लिंक के साथ दिखाती है, जिससे ड्राइवर तेज़ी से वाहन हटा सकता है।</p>
+          <p>एक 15-मिनट का टाइमर शुरू होता है। वेबसाइट नज़दीकी उपलब्ध पार्किंग स्पेस को मैप लिंक के साथ दिखाती है, जिससे ड्राइवर तेज़ी से वाहन हटा सकता है।</p>
         </div>
       </div>
   
@@ -426,6 +516,87 @@
     scrollBtn.onclick = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
+  
+  let fuel = 0;
+  let co2 = 0;
+  let delay = 0;
+  let violations = 0;
+
+  function animateValue(id, start, end, suffix = "") {
+
+    let current = start;
+
+    const increment = (end - start) / 25;
+
+    document.getElementById(id).classList.add("pulse");
+
+    setTimeout(() => {
+      document.getElementById(id).classList.remove("pulse");
+    }, 500);
+
+    const timer = setInterval(() => {
+
+      current += increment;
+
+      if (
+        (increment > 0 && current >= end) ||
+        (increment < 0 && current <= end)
+      ) {
+        current = end;
+        clearInterval(timer);
+      }
+
+      document.getElementById(id).innerHTML =
+        (suffix === " L" || suffix === " kg")
+        ? current.toFixed(2) + suffix
+          : Math.round(current) + suffix;
+
+    }, 20);
+
+  }
+
+  window.showReward = function() {
+
+    let oldFuel = fuel;
+    let oldCo2 = co2;
+    let oldDelay = delay;
+    let oldViolations = violations;
+
+    fuel += 0.05;
+    co2 += 0.12;
+    delay += 3;
+    violations += 1;
+
+    animateValue("fuel", oldFuel, fuel, " L");
+    animateValue("co2", oldCo2, co2, " kg");
+    animateValue("delay", oldDelay, delay, " min");
+    animateValue("violations", oldViolations, violations);
+
+    document.getElementById("rewardMessage").style.display =
+      "block";
+
+  /* Citizen Badge */
+
+    const badge =
+    document.getElementById("citizenBadge");
+
+    if (violations >= 10) {
+
+      badge.innerHTML =
+      "🥇 शहरी गतिशीलता चैंपियन";
+
+    } else if (violations >= 5) {
+
+      badge.innerHTML =
+      "🥈 स्मार्ट सिटी समर्थक";
+
+    } else {
+
+      badge.innerHTML =
+      "🥉 जिम्मेदार नागरिक";
+    }
+    };
+    
   </script>
   
   
