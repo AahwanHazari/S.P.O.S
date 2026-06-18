@@ -81,6 +81,8 @@ html, body {
   #midboy {
     font-size: 2rem;
     margin-top: 1rem;
+    alignment: center;
+
   }
   #motto {
     font-style: italic;
