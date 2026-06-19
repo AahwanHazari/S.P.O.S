@@ -920,13 +920,15 @@ p {
     opacity:1;
   }
 }
-@media (max-width: 768px) {
-  #urban-impact {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
+.impact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
+@media (max-width: 768px) {
   .impact-container {
     grid-template-columns: 1fr;
   }
