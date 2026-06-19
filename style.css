@@ -922,7 +922,7 @@ p {
 }
 @media (max-width: 768px) {
   #urban-impact {
-    padding: 3rem 1rem;
+    padding: 3rem 0.5rem;
   }
 
   .impact-container {
