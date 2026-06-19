@@ -631,7 +631,7 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
   gap: 2rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -870,6 +870,13 @@ p {
   margin:12px 0;
   color:white;
   font-size:0.95rem;
+
+  min-width:0;
+}
+
+.status-item span{
+  min-width:0;
+  overflow-wrap:break-word;
 }
 
 .status-led{
