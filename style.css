@@ -120,8 +120,8 @@ html, body {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
   gap: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
 }
   .info-card {
     background: #121212;
@@ -632,7 +632,6 @@ p {
 /* ==========================
    CIVIC REWARDS SECTION
 ========================== */
-
 #urban-impact {
   background: #0d1117;
   padding: 4rem 2rem;
@@ -933,5 +932,10 @@ p {
   .impact-card {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media (max-width: 768px) {
+  .impact-container {
+    grid-template-columns: 1fr;
   }
 }
