@@ -629,7 +629,7 @@ p {
 
 .impact-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: auto;
@@ -906,5 +906,14 @@ p {
   100%{
     transform:scale(1);
     opacity:1;
+  }
+}
+@media (max-width: 768px) {
+  #urban-impact {
+    padding: 3rem 1rem;
+  }
+
+  .impact-container {
+    grid-template-columns: 1fr;
   }
 }
