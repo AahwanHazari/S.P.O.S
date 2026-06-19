@@ -116,6 +116,13 @@ html, body {
     max-width: 900px;
     margin: 0 auto;
   }
+.impact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
   .info-card {
     background: #121212;
     color: #eee;
@@ -632,13 +639,6 @@ p {
   text-align: center;
 }
 
-.impact-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
-}
 
 .impact-card {
   background: #111827;
@@ -647,6 +647,7 @@ p {
   border: 1px solid #00ffe733;
   box-shadow: 0 0 15px #00ffe722;
 }
+
 
 .impact-card h3 {
   color: #00ffe7;
