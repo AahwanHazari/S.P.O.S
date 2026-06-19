@@ -929,12 +929,10 @@ p {
 }
 
 @media (max-width: 768px) {
-  .impact-card {
-    margin-left: auto;
-    margin-right: auto;
+  #urban-impact {
+    padding: 3rem 0.5rem;
   }
-}
-@media (max-width: 768px) {
+
   .impact-container {
     grid-template-columns: 1fr;
   }
